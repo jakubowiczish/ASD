@@ -25,7 +25,7 @@ int main() {
     std::cout << "Insert b" << std::endl;
     std::cin >> b;
     std::cout << "Amount of numbers between " << a << " and " << b << " is: ";
-    std::cout << countInterval(root,28,31) << std::endl;
+    std::cout << countInterval(root,a,b) << std::endl;
     return 0;
 }
 
