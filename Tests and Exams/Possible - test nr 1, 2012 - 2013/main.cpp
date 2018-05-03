@@ -4,10 +4,10 @@
 #include <cstring>
 using namespace std;
 /*
-Proszê napisaæ funkcjê bool possible( char* u, char* v, char* w ), która zwraca prawdê
-jeœli z liter s³ów u i v da siê u³o¿yæ s³owo w (nie jest konieczne wykorzystanie wszystkich liter)
-oraz fa³sz w przeciwnym wypadku. Mo¿na za³o¿yæ, ¿e w i v sk³adaj¹ siê wy³¹cznie z ma³ych liter
-alfabetu ³aciñskiego. Proszê krótko uzasadniæ wybór zaimplementowanego algorytmu.
+Prosze napisac funkcje bool possible( char* u, char* v, char* w ), która zwraca prawde
+jezli z liter slów u i v da sie ulozyc slowo w (nie jest konieczne wykorzystanie wszystkich liter)
+oraz falsz w przeciwnym wypadku. Mo¿na zalozyc, ze w i v skladaja sie wylacznie z malych liter
+alfabetu lacinskiego. Prosze krótko uzasadnic wybór zaimplementowanego algorytmu.
 */
 const int N = 10;
 bool possible(char *u, char *v, char *w);

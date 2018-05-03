@@ -4,12 +4,12 @@
 using namespace std;
 /// based on https://github.com/kaszperro
 /*
-Zadanie 1. Dana jest struktura opisuj¹ca listê jednokierunkow¹ przechowuj¹c¹ liczby typu double:
+Zadanie 1. Dana jest struktura opisujaca liste jednokierunkowa przechowujaca liczby typu double:
 struct Node { Node* next; double value; };
-Proszê zaimlementowaæ funkcjê Node* sortList( Node* L ), która sortuje listê wejœciow¹ w kolejnoœci
-nierosn¹cej i zwraca wskaŸnik na element, który po posortowaniu zosta³ g³ow¹ tej listy (wejœciowa lista nie
-ma wartownika). Funkcja powinna byæ mo¿liwie jak najszybsza (wiadomo, ¿e liczby w wejœciowej liœcie
-zosta³y wygenerowane zgodnie z rozk³adem jednostajnym na przedziale (0,4)).
+Prosze zaimlementowac funkcje Node* sortList( Node* L ), która sortuje liste wejsciowa w kolejnosci
+nierosnacej i zwraca wskaznik na element, który po posortowaniu zostal glowa tej listy (wejsciowa lista nie
+ma wartownika). Funkcja powinna byc mozliwie jak najszybsza (wiadomo, ze liczby w wejsciowej liscie
+zostaly wygenerowane zgodnie z rozkladem jednostajnym na przedziale (0,4)).
 */
 struct Node{
     double val;

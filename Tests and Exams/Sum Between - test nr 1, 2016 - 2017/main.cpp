@@ -2,13 +2,13 @@
 #include <algorithm>
 using namespace std;
 /*
-Proszê zaimplementowaæ funkcjê:
+Prosze zaimplementowac funkcje:
 int SumBetween(int T[], int from, int to, int n);
-Zadaniem tej funkcji jest obliczyæ sumê liczb z n elementowej tablicy T, które w posortowanej
-tablicy znajdywa³yby siê na pozycjach o indeksach od from do to (w³¹cznie). Mo¿na przyj¹æ, ¿e
-liczby w tablicy T s¹ parami ró¿ne (ale nie mo¿na przyjmowaæ ¿adnego innego rozk³adu danych).
-Zaimplementowana funkcja powinna byæ mo¿liwie jak najszybsza. Proszê oszacowaæ jej z³o¿onoœæ
-czasow¹ (oraz bardzo krótko uzasadniæ to oszacowanie).
+Zadaniem tej funkcji jest obliczyc sume liczb z n elementowej tablicy T, które w posortowanej
+tablicy znajdywalyby sie na pozycjach o indeksach od from do to (wlacznie). Mo¿na przyjac, ze
+liczby w tablicy T sa parami rózne (ale nie mozna przyjmowac zadnego innego rozkladu danych).
+Zaimplementowana funkcja powinna byc mozliwie jak najszybsza. Prosze oszacowac jej zlozonos
+czasowa (oraz bardzo krótko uzasadniæ to oszacowanie).
 */
 
 int partition(int A[], int p,int q)

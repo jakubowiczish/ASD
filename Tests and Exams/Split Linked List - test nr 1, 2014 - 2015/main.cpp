@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 /*
-Dane s¹ nastêpuj¹ce struktury:
+Dane sa nastepujace struktury:
 struct Node { Node* next; int val; };
 struct TwoLists { Node* even; Node* odd; };
-Napisaæ funkcjê: TwoLists split(Node* list);
-Funkcja rozdziela listê na dwie: jedn¹ zawieraj¹c¹ liczby parzyste i drug¹ zawieraj¹c¹ liczby
-nieparzyste. Listy nie zawieraj¹ wartowników
+Napisac funkcje: TwoLists split(Node* list);
+Funkcja rozdziela liste na dwie: jedna zawierajaca liczby parzyste i druga zawierajaca liczby
+nieparzyste. Listy nie zawieraja wartowników
 */
 struct Node{
     int val;
