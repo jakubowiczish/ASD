@@ -34,6 +34,7 @@ int main() {
     }
     inorderPrint(mine);
     std::cout << "Average value of node in BST: " << std::endl;
+    std::cout << std::setprecision(4);
     std::cout << average(mine) << std::endl;
     std::cout << average_v2(mine) << std::endl;
     return 0;
