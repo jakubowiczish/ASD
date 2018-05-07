@@ -37,6 +37,7 @@ int main() {
     std::cout << std::setprecision(4);
     std::cout << average(mine) << std::endl;
     std::cout << average_v2(mine) << std::endl;
+    freeBST(mine);
     return 0;
 }
 
