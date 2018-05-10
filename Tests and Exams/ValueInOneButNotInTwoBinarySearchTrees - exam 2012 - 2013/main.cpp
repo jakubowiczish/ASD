@@ -38,6 +38,7 @@ int main() {
     BSTnode *finalTree = foundOnlyInOne(first,second);
     std::cout << "Final Tree: " << std::endl;
     inorderPrint(finalTree);
+    freeBST(first); freeBST(second); freeBST(finalTree);
     return 0;
 }
 
