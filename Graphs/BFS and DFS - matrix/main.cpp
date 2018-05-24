@@ -47,6 +47,60 @@ int main() {
     return 0;
 }
 
+
+void BFSmatrix(Graph *G, int s)
+{
+    int *distance = new int[G -> size];
+    int *predecessor = new int[G -> size];
+
+    for(int i = 0; i < G -> size; i++){
+        G -> visited[i] = false;
+        distance[i] = INT32_MAX;
+        predecessor[i] = -1;
+    }
+    std::queue<int> q;
+    q.push(s);
+    G -> visited[s] = true;
+    distance[s] = 0;
+    predecessor[s] = -1;
+
+    int current;
+    std::cout << "BFS from starting point at " << s << std::endl;
+    while(!q.empty()){
+        current = q.front();
+        q.pop();
+        std::cout << current << " ";
+
+        for(int v = 0; v < G -> size; v++){
+            if(G -> E[current][v] == 1 and !(G -> visited[v])){
+                G -> visited[v] = true;
+                distance[v] = distance[current] + 1;
+                predecessor[v] = current;
+                q.push(v);
+            }
+        }
+    }
+
+    std::cout << std::endl;
+    for(int i = 0; i < G -> size; i++)
+        std::cout << "index: " << i << ", distance: " << distance[i] << ", predecessor: " << predecessor[i] << std::endl;
+}
+
+void DFSmatrix_UTIL(Graph *G, int s)
+{
+    G -> visited[s] = true;
+    std::cout << s << " ";
+    for(int i = 0; i < G -> size; i++)
+        if(G -> E[s][i] == 1 and !(G -> visited[i]))
+            DFSmatrix_UTIL(G,i);
+}
+
+void DFSmatrix(Graph *G, int s)
+{
+    std::cout << "DFS from starting point at: " << s << std::endl;
+    DFSmatrix_UTIL(G,s);
+}
+
 Graph *initializeDirectedGraph()
 {
     int vertices, edges;
@@ -108,60 +162,6 @@ Graph *initializeUndirectedGraph()
 
     return F;
 }
-
-void BFSmatrix(Graph *G, int s)
-{
-    int *distance = new int[G -> size];
-    int *predecessor = new int[G -> size];
-
-    for(int i = 0; i < G -> size; i++){
-        G -> visited[i] = false;
-        distance[i] = INT32_MAX;
-        predecessor[i] = -1;
-    }
-    std::queue<int> q;
-    q.push(s);
-    G -> visited[s] = true;
-    distance[s] = 0;
-    predecessor[s] = -1;
-
-    int current;
-    std::cout << "BFS from starting point at " << s << std::endl;
-    while(!q.empty()){
-        current = q.front();
-        q.pop();
-        std::cout << current << " ";
-
-        for(int v = 0; v < G -> size; v++){
-            if(G -> E[current][v] == 1 and !(G -> visited[v])){
-                G -> visited[v] = true;
-                distance[v] = distance[current] + 1;
-                predecessor[v] = current;
-                q.push(v);
-            }
-        }
-    }
-
-    std::cout << std::endl;
-    for(int i = 0; i < G -> size; i++)
-        std::cout << "index: " << i << ", distance: " << distance[i] << ", predecessor: " << predecessor[i] << std::endl;
-}
-
-void DFSmatrix_UTIL(Graph *G, int s)
-{
-    G -> visited[s] = true;
-    std::cout << s << " ";
-    for(int i = 0; i < G -> size; i++)
-        if(G -> E[s][i] == 1 and !(G -> visited[i]))
-            DFSmatrix_UTIL(G,i);
-}
-
-void DFSmatrix(Graph *G, int s)
-{
-    std::cout << "DFS from starting point at: " << s << std::endl;
-    DFSmatrix_UTIL(G,s);
-}
-
 
 void printMatrix(Graph *G)
 {
