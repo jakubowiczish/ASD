@@ -35,6 +35,8 @@ void BFSlist(Graph *G, int s);
 void DFSlist_UTIL(Graph *G, int s);
 void DFSlist(Graph *G, int s);
 
+void deleteGraph(Graph *G);
+
 int main() {
     Graph *G = initializeUndirectedGraph();
     std::cout << "Give me the starting vertex for BFS: " << std::endl;
@@ -52,6 +54,7 @@ int main() {
         5 0
      */
     BFSlist(G,vertex);
+    deleteGraph(G);
     return 0;
 }
 
@@ -203,4 +206,18 @@ void printList(Graph *G)
         std::cout << std::endl;
     }
     std::cout << std::endl;
+}
+
+void deleteGraph(Graph *G)
+{
+    for(int i = 0; i < G -> size; i++){
+        Vertex *ptr = G -> E[i];
+        while(ptr){
+            Vertex *tmp = ptr;
+            ptr = ptr -> next;
+            delete tmp;
+        }
+    }
+    delete G -> E;
+    delete G -> visited;
 }
