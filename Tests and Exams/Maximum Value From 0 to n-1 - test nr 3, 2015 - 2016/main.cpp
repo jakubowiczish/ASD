@@ -6,6 +6,7 @@ struct field {
     int value;
     int long j;
     int short j;
+};
 
 Z każdego pola można skakać tylko o ilość pól zapisaną w long j lub short j. Napisać program
 który zwróci maksymalną wartość jaką możemy osiągnąć poprzez przejście z pola 0 do n-1.
